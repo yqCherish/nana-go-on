@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
-import { Button } from 'vant';
+import { Button, Dialog, Field } from 'vant';
 import 'vant/lib/index.css';
 Vue.use(Button);
+Vue.use(Dialog);
+Vue.use(Field);
 
 Vue.config.productionTip = false
 
