@@ -1,5 +1,6 @@
 <template>
   <div>
+    <nav-bar title="政治"/>
     <van-contact-card
         v-for="item in typeList"
         :key="item"
@@ -10,8 +11,12 @@
 </template>
 
 <script>
+import navBar from "@/components/nav.vue";
 export default {
   name: "politics",
+  components: {
+    navBar
+  },
   data() {
     return {
       typeList: ["全程视频", "近10年真题及解析", "押题"]

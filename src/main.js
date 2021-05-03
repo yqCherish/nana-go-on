@@ -8,7 +8,8 @@ import {
   GridItem,
   Grid,
   Divider,
-  CellGroup
+  CellGroup,
+  NavBar
 } from 'vant';
 import 'vant/lib/index.css';
 import router from "./router";
@@ -20,6 +21,7 @@ Vue.use(GridItem);
 Vue.use(Grid);
 Vue.use(Divider);
 Vue.use(CellGroup);
+Vue.use(NavBar);
 
 Vue.config.productionTip = false
 

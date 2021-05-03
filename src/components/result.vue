@@ -47,6 +47,9 @@ export default {
           name: "professional"
         })
       }
+    },
+    onClickLeft() {
+      this.$router.go(-1);
     }
   }
 }
@@ -54,6 +57,7 @@ export default {
 
 <style scoped>
 .result {
+  width: 100%;
   max-width: 500px;
   margin: 0 auto;
 }

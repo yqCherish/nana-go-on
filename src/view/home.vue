@@ -60,6 +60,7 @@ export default {
       if (current_value === 202155) {
         Dialog({message: "bingo~芝麻开门，太聪明了吧，现在可以点击打开啦"}).then(() => {
           this.success = true;
+          localStorage.setItem("passwordSuccess", "1");
         });
       } else {
         let msg = "哈哈，您的密码没对上呢~";
@@ -68,17 +69,33 @@ export default {
         } else if (current_value.toString() === "0503") {
           msg = "哎哟，手机密码也不对呢，再想想~";
         } else if (current_value === 121855) {
-          msg = "居然想到了这条，厉害哟，不过还是得再相信爱那个"
+          msg = "居然想到了这条，厉害哟，不过还是得再思考思考~"
         }
         Dialog({ message: msg })
         this.times = this.times - 1;
-        localStorage.setItem("times", this.times);
+        localStorage.setItem(
+            "rest", JSON.stringify({
+              times: this.times,
+              timestamp: new Date().getTime()
+            })
+        );
       }
       this.value = "";
     }
   },
   mounted() {
-    this.times = localStorage.getItem("times") ? localStorage.getItem("times") : 5;
+    const rest = localStorage.getItem("rest");
+    const rest_data = rest ? JSON.parse(rest) : null;
+    const timestamp = rest_data ? rest_data.timestamp : 0;
+    const current_stamp = new Date().getTime();
+    const times = rest_data ? rest_data.times : 5;
+    const today7 = new Date(new Date().toLocaleDateString()).getTime() + 7 * 60 * 60 * 1000;
+    this.times =
+        current_stamp < today7 ? times : timestamp > today7 ? times : 5;
+    this.success =
+        localStorage.getItem("passwordSuccess") ?
+            localStorage.getItem("passwordSuccess") :
+            false
   }
 }
 </script>
