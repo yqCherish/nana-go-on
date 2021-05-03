@@ -1,31 +1,16 @@
 <template>
   <div id="app">
-    <div class="animation-style" ref="animation"></div>
-    <HelloWorld/>
+    <router-view class="router-view" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
-import lottie from 'lottie-web';
-// import Trophy from '@/assets/json/bulb.json';
-import manFlowers from '@/assets/json/manFlowers.json';
-// import Trophy from '@/assets/json/Trophy.json';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  },
+  components: {},
   mounted() {
-    this.anim = lottie.loadAnimation({
-          container: this.$refs.animation,
-          renderer: 'svg',
-          loop: true,
-          autoplay: true,
-          animationData: manFlowers,//动画json
-        }
-    )
+    //
   }
 }
 </script>
@@ -42,6 +27,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
