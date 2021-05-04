@@ -5,6 +5,7 @@ import home from "../view/home.vue";
 import english from "../view/english.vue";
 import politicsVideoList from "../view/politicsVideoList.vue";
 import professional from "../view/professional.vue";
+import gameList from "../view/gameList.vue";
 
 Vue.use(Router);
 
@@ -34,6 +35,11 @@ const router = new Router({
             path:'/professional',
             name: 'professional',
             component: professional
+        },
+        {
+            path:'/gameList',
+            name: 'gameList',
+            component: gameList
         }
     ]
 })

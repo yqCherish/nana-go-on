@@ -10,6 +10,8 @@
           plain
           :disabled="times < 1"
           type="warning">急不可待，芝麻开门</VanButton>
+      <VanButton type="info" class="not_waiting" plain @click="play">小试牛刀，密码碎片</VanButton>
+      <VanButton type="danger" class="not_waiting" plain @click="qrcode">专业顾问，分析解码</VanButton>
       <VanDialog v-model="show" :title="title" show-cancel-button @confirm="confirm">
         <van-field
             v-model="value"
@@ -18,6 +20,13 @@
             type="number"
         />
       </VanDialog>
+      <van-popup v-model="popUpShow">
+        <p style="color: #1989fa;">微信扫码获取您的私人顾问~</p>
+        <van-image
+            width="300"
+            :src="qrcodeImg"
+        />
+      </van-popup>
     </div>
     <Result v-else></Result>
   </div>
@@ -27,6 +36,7 @@
 import { Dialog } from 'vant';
 import Expecting from "../components/Expecting";
 import Result from "../components/result";
+
 export default {
   name: 'HelloWorld',
   components: {
@@ -40,7 +50,10 @@ export default {
       show: false,
       value: "",
       times: 5,
-      success: false
+      success: false,
+      popUpShow: false,
+      qrcodeImg: require("@/assets/img/qrcode.jpg"),
+      gameShow: false
     }
   },
   computed: {
@@ -81,6 +94,14 @@ export default {
         );
       }
       this.value = "";
+    },
+    play() {
+      this.$router.push({
+        name: "gameList"
+      })
+    },
+    qrcode() {
+      this.popUpShow = true;
     }
   },
   mounted() {

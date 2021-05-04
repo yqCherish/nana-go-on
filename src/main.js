@@ -9,10 +9,13 @@ import {
   Grid,
   Divider,
   CellGroup,
-  NavBar
+  NavBar,
+  Popup,
+  Image
 } from 'vant';
 import 'vant/lib/index.css';
 import router from "./router";
+import "./styles/base.css";
 Vue.use(Button);
 Vue.use(Dialog);
 Vue.use(Field);
@@ -22,6 +25,8 @@ Vue.use(Grid);
 Vue.use(Divider);
 Vue.use(CellGroup);
 Vue.use(NavBar);
+Vue.use(Popup);
+Vue.use(Image);
 
 Vue.config.productionTip = false
 

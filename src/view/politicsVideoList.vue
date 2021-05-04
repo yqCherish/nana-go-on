@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="max-width-class">
     <nav-bar title="政治视频课"/>
     <van-contact-card
         v-for="item in typeList"

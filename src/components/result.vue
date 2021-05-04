@@ -1,5 +1,5 @@
 <template>
-  <div class="result">
+  <div class="max-width-class">
     <div class="animation-result" ref="animation_result"></div>
     <van-contact-card
         v-for="item in classList"
@@ -56,21 +56,8 @@ export default {
 </script>
 
 <style scoped>
-.result {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-}
 .animation-result {
   max-width: 160px;
   margin: 0 auto;
-}
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
 </style>
