@@ -84,6 +84,11 @@ export default {
       return this.imgUrlList[this.key_index];
     }
   },
+  watch: {
+    key_index(){
+      this.start()
+    }
+  },
   mounted() {
     this.start();
   },
