@@ -3,3 +3,13 @@
     max-width: 500px;
     margin: 0 auto;
 }
+
+.cell-cs {
+    display: inline-block;
+    width: 50px;
+    text-align: left;
+}
+
+.cell-va {
+    text-align: right;
+}

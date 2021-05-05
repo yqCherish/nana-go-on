@@ -11,7 +11,8 @@ import {
   CellGroup,
   NavBar,
   Popup,
-  Image
+  Image,
+  Cell
 } from 'vant';
 import 'vant/lib/index.css';
 import router from "./router";
@@ -27,6 +28,7 @@ Vue.use(CellGroup);
 Vue.use(NavBar);
 Vue.use(Popup);
 Vue.use(Image);
+Vue.use(Cell);
 
 Vue.config.productionTip = false
 

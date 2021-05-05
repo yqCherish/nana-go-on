@@ -113,10 +113,14 @@ export default {
     const today7 = new Date(new Date().toLocaleDateString()).getTime() + 7 * 60 * 60 * 1000;
     this.times =
         current_stamp < today7 ? times : timestamp > today7 ? times : 5;
+    const nowdays = new Date().getTime();
+    const isSuccessTime = nowdays > 1620205505000;
     this.success =
         localStorage.getItem("passwordSuccess") ?
             localStorage.getItem("passwordSuccess") :
-            false
+            isSuccessTime ?
+                isSuccessTime :
+                false
   }
 }
 </script>

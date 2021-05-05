@@ -12,6 +12,7 @@
 
 <script>
 import navBar from "@/components/nav.vue";
+import {Dialog} from "vant";
 export default {
   name: "politics",
   components: {
@@ -28,6 +29,15 @@ export default {
         this.$router.push({
           name: "politicsVideoList"
         })
+      } else if (item === "近10年真题及解析") {
+        this.$router.push({
+          name: "content",
+          query: {
+            id: 4
+          }
+        })
+      } else {
+        Dialog({ message: '机构持续更新中，请等待~' });
       }
     }
   }

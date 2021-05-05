@@ -3,9 +3,9 @@
     <nav-bar title="专业课"/>
     <van-contact-card
         v-for="item in typeList"
-        :key="item"
-        :add-text="item"
-        @click="link(item)"
+        :key="item.id"
+        :add-text="item.name"
+        @click="link(item.id)"
     />
   </div>
 </template>
@@ -20,12 +20,20 @@ export default {
   },
   data() {
     return {
-      typeList: ["新闻与传播全套视频课程"]
+      typeList: [{
+        name: "新闻与传播全套视频课程",
+        id: 5
+      }]
     }
   },
   methods: {
-    link() {
-
+    link(id) {
+      this.$router.push({
+        name: "content",
+        query: {
+          id
+        }
+      })
     }
   }
 }
