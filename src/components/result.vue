@@ -19,7 +19,7 @@ export default {
   components: {},
   data() {
     return {
-      classList: ["政治", "英语", "专业课"]
+      classList: ["政治", "英语", "专业课", "倒计时"]
     }
   },
   mounted() {
@@ -45,6 +45,10 @@ export default {
       } else if (item === "专业课") {
         this.$router.push({
           name: "professional"
+        })
+      } else if (item === "倒计时") {
+        this.$router.push({
+          name: "countList"
         })
       }
     },

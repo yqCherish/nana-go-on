@@ -12,7 +12,9 @@ import {
   NavBar,
   Popup,
   Image,
-  Cell
+  Cell,
+  Calendar,
+  CountDown
 } from 'vant';
 import 'vant/lib/index.css';
 import router from "./router";
@@ -29,6 +31,8 @@ Vue.use(NavBar);
 Vue.use(Popup);
 Vue.use(Image);
 Vue.use(Cell);
+Vue.use(Calendar);
+Vue.use(CountDown);
 
 Vue.config.productionTip = false
 
