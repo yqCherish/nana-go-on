@@ -46,6 +46,10 @@ export default {
         this.$router.push({
           name: "professional"
         })
+      } else if (item === "倒计时") {
+        this.$router.push({
+          name: "countList"
+        })
       }
     },
     onClickLeft() {

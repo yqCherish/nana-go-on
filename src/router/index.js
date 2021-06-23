@@ -7,6 +7,8 @@ import politicsVideoList from "../view/politicsVideoList.vue";
 import professional from "../view/professional.vue";
 import gameList from "../view/gameList.vue";
 import content from "../view/content.vue";
+import countDown from "../view/countDown.vue";
+import countList from "../view/countList.vue";
 
 Vue.use(Router);
 
@@ -46,6 +48,16 @@ const router = new Router({
             path:'/content',
             name: 'content',
             component: content
+        },
+        {
+            path:'/countDown',
+            name: 'countDown',
+            component: countDown
+        },
+        {
+            path:'/countList',
+            name: 'countList',
+            component: countList
         }
     ]
 })
