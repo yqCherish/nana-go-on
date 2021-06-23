@@ -19,7 +19,7 @@ export default {
   components: {},
   data() {
     return {
-      classList: ["政治", "英语", "专业课"]
+      classList: ["政治", "英语", "专业课", "倒计时"]
     }
   },
   mounted() {
