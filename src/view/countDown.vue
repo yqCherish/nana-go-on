@@ -24,12 +24,12 @@ export default {
   data() {
     return {
       maxDate: 0,
-      time: 0
+      time: 0,
+      title: ""
     }
   },
   created() {
-    console.log("")
-    this.time = this.$route.query.value - new Date().getTime();
+    this.time = parseInt(this.$route.query.value) - new Date().getTime();
     this.title = this.$route.query.title;
     this.maxDate =
         this.title === "考研倒计时" ?
@@ -40,7 +40,5 @@ export default {
 </script>
 
 <style scoped>
-  .count {
-    font-size: 24px;
-  }
+  
 </style>
