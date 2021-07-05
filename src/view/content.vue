@@ -24,8 +24,8 @@ export default {
         name: "考研英语视频"
       }, {
         id: 2,
-        value: "https://pan.baidu.com/s/1Sn8GPrdLfwSXdySWIX40VQ",
-        password: "bn2j",
+        value: "https://pan.baidu.com/s/1RSoZ1JKAq6DaZINspl5qUQ",
+        password: "kn75",
         name: "考研政治腿姐"
       }, {
         id: 3,
@@ -44,13 +44,13 @@ export default {
         name: "专业课"
       }, {
         id: 6,
-        value: "https://pan.baidu.com/s/1v1uocv88eDvjxmF65zSQow",
-        password: "j0do",
+        value: "https://pan.baidu.com/s/1nzbMRRJhC4UVV3GJOFKiBw",
+        password: "rh0m",
         name: "考研政治肖秀荣"
       }, {
         id: 7,
-        value: "https://pan.baidu.com/s/1SQSprwRC2oxARl5yOMs5vg",
-        password: "2amf",
+        value: "https://pan.baidu.com/s/1c9svBumYqHgVL9x1ftwOZw",
+        password: "iqgw",
         name: "考研政治徐涛"
       }],
       value: "",
